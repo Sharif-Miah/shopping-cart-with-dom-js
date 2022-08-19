@@ -30,3 +30,27 @@ function getTextElementById(valueId) {
     return totalProctuctMoney;
 }
 
+function setTextElementById(element, value) {
+    const subtotalElement = document.getElementById(element);
+    subtotalElement.innerText = value;
+}
+
+
+function calculateSubTotal() {
+    const currentPhoneTotal = getTextElementById('iphone-price');
+    const currentCaseTotal = getTextElementById('case-price');
+    const totalItemMoney = currentPhoneTotal + currentCaseTotal;
+
+
+
+    setTextElementById('sub-total', totalItemMoney);
+
+    const taxtAmount = parseFloat((totalItemMoney * 0.1).toFixed(2));
+    setTextElementById('tax', taxtAmount);
+
+    const totalAmount = totalItemMoney + taxtAmount;
+    setTextElementById('total-all', totalAmount);
+    console.log(typeof totalAmount);
+
+
+}
