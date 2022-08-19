@@ -24,5 +24,9 @@ function QuentityPriceCase(numberOfPhones, price) {
     totalMoney.innerText = pricInIphone;
 }
 
-
+function getTextElementById(valueId) {
+    const totalProctuctMoneyString = document.getElementById(valueId);
+    const totalProctuctMoney = parseInt(totalProctuctMoneyString.innerText);
+    return totalProctuctMoney;
+}
 
