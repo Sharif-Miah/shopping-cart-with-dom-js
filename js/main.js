@@ -1,14 +1,19 @@
 
 
-function priceInProduct(price) {
-    const inputField = document.getElementById(price);
-    const inputFieldConvertNum = parseInt(inputField.value);
-    return inputFieldConvertNum;
+function priceInProduct(totalPrice) {
+    const phoneInputFifeld = document.getElementById('iphone-input-field');
+    const phonenumbers = parseInt(phoneInputFifeld.value)
+
+    let nweCaseNumber;
+    if (totalPrice === true) {
+        nweCaseNumber = phonenumbers + 1;
+    } else {
+        nweCaseNumber = phonenumbers - 1;
+    }
+    phoneInputFifeld.value = nweCaseNumber;
+    return nweCaseNumber;
 }
 
 
-function setElement(element, mainValue) {
-    const phoneNumberValue = document.getElementById(element);
-    const phoneValue = phoneNumberValue.value = mainValue;
-    return phoneValue;
-}
+
+
